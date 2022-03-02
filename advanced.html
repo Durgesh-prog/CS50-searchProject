@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: arial, sans-serif;
+        }
+
+        body {
+            height: 100%;
+        }
+
+        .mainContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-self: center;
+            margin: 20px 40px;
+        }
+
+
+        p {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .mainContent form {
+            position: relative;
+        }
+
+        .mainContent form label {
+            width: 200px;
+            margin: 20px 0px;
+        }
+
+
+
+
+        #searchQuery {
+            width: 100%;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            margin: 10px 0px;
+            padding: 10px;
+            height: 44px;
+            background-color: #fff;
+            box-shadow: none;
+            outline: none;
+            width: 550px;
+            padding-left: 50px;
+        }
+
+        #searchQuery:hover {
+            border: 2px solid #dfe1e5;
+            box-shadow: none;
+
+        }
+
+        .searchContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .googleSearch {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-size: 14px;
+            margin: 11px 4px;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            min-width: 54px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .topNav {
+            display: flex;
+            justify-content: start;
+            height: 100px;
+            margin: 40px 20px;
+            flex-direction: column;
+        }
+
+        .topNav img {
+            width: 100px;
+        }
+
+        .topNav h4 {
+            margin-top: 10px;
+            color: #d93025;
+        }
+
+        .topNav a {
+            margin: 20px 10px;
+            text-decoration: none;
+            color: #3c4043;
+        }
+
+        .topNav .left{
+            text-align: end;
+        }
+
+        #text05 {
+            margin-right: 10px;
+        }
+
+        #text06 {
+            margin-left: 10px;
+        }
+
+
+
+        .row {
+            align-items: baseline;
+            flex-wrap: nowrap;
+        }
+
+        input {
+            width: inherit;
+        }
+
+        .custom input {
+            width: auto !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="topNav">
+            <div class="row" >
+                <div class="col" >
+                    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+                    alt="Google" />
+                <h4>Advanced Search</h4>
+                </div>
+                <div class="col left" >
+                    <a href="/index.html">Google Search</a>
+                    <a href="/images.html">Image Search</a>
+                </div>
+            </div>
+        
+        </div>
+        <div class="mainContent">
+
+            <form action="https://www.google.com/search">
+
+                <div class="row">
+                    <div class="col">
+                        <p>Find pages with...</p>
+                    </div>
+                    <div class="col">
+                        <p> To do this in the search box.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <label for="text01">all these words:</label>
+                        <input value="" autofocus="autofocus" id="text01" name="as_q" type="text">
+                    </div>
+                    <div class="col">
+                        Type the important words: tri-colour rat terrier
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="text02">this exact word or phrase:</label>
+                        <input value="" id="text02" name="as_epq" type="text">
+                    </div>
+                    <div class="col">
+                        Put exact words in quotes: "rat terrier"
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="text03">any of these words:</label>
+                        <input value="" id="text03" name="as_oq" type="text">
+                    </div>
+                    <div class="col">
+                        Type OR between all the words you want: miniature OR standard
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="text04">none of these words:</label>
+                        <input value="" id="text04" name="as_eq" type="text">
+                    </div>
+                    <div class="col">
+                        Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col custom">
+                        <label for="text05">numbers ranging from:</label>
+                        <input value="" id="text05" name="as_nlo" type="text">
+                        to
+                        <input value="" id="text06" name="as_nhi" type="text">
+                    </div>
+                    <div class="col-6">
+                        Put two full stops between the numbers and add a unit of measurement: 10..35 kg, £300..£500,
+                        2010..2011
+
+                    </div>
+                </div>
+
+            
+
+                <!-- <div class="row">
+                    <div class="col">
+                      <p>  Then narrow your results by... </p>
+                    </div>
+                </div> -->
+
+                <!-- <div class="row">
+                    <div class="col-6">
+                        <label for="text01">language:</label>
+                        <input value="" autofocus="autofocus" id="text01" name="as_q" type="text">
+                    </div>
+                    <div class="col">
+                        Type the important words: tri-colour rat terrier
+                    </div>
+                </div> -->
+
+                <button class=" btn btn-primary " type="submit">Advanced Search</button>
+        </div>
+
+        </form>
+    </div>
+    </div>
+    <script>
+        window.onload = function () {
+            var feelingLucky = document.querySelector("#feelingLucky");
+            feelingLucky.onclick = submitted.bind(feelingLucky);
+        }
+
+        function submitted(event) {
+            event.preventDefault();
+            window.location.href = `https://www.google.com/doodles`;
+        }
+
+    </script>
+</body>
+
+</html>
